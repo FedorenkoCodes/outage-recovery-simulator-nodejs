@@ -14,7 +14,7 @@ router.get('/user/:userId', (req, res) => {
   }
 
   // Execute an SQL query to fetch the user from the database.
-  db.get("SELECT * FROM users WHERE id = ?", [userid], (err, row) => {
+  db.get("SELECT * FROM users WHERE id = ?", [userId], (err, row) => {
     db.close();
 
     // Handle potential errors during the database query.
